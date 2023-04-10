@@ -1,6 +1,7 @@
 console.log("This is a convert extension!");
 
-$("#convert").on("click", () => {
+$("body").on("click", "button#convert", function(event){
+    event.preventDefault();
     console.log("converting...");
 
     let text = $(".field_wrapper #camelCase").val();
@@ -10,9 +11,14 @@ $("#convert").on("click", () => {
         $(".input_validations").text("Only one word is permitted!");
     } else {
         const camelToSnakeCase = text.replace(/[A-Z]/g, letter => `_${letter.toLowerCase()}`);
-    console.log(camelToSnakeCase);
+        console.log(camelToSnakeCase);
+        $(".field_wrapper #snake_case").text(camelToSnakeCase);
 
-    $(".field_wrapper #snake_case").text(camelToSnakeCase);
+        // copy to clipboard
+        navigator.clipboard.writeText(camelToSnakeCase).then(() => {
+            $(".output_copy").removeClass("hidden")
+        });
     }
+
 
 })

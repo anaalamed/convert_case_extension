@@ -1,0 +1,33 @@
+.menu {
+
+}
+
+.menu_wrapper {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0 auto;
+    background-color: rgba(0, 89, 255, 0.24);
+    height: 2rem;
+}
+
+.menu_wrapper li {
+    padding: 0.2rem 0.8rem;
+    margin: 0 0.2rem;
+    /* border-radius: 0.5rem; */
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 27px;
+    color: rgb(0, 89, 255);
+    cursor: pointer;
+}
+
+.menu_wrapper li:hover {
+    /* background-color: rgba(0, 89, 255, 0.24); */
+    border-bottom: 2px solid rgb(0, 89, 255);
+}
+
+.menu_wrapper li.active {
+    border-bottom: 2px solid rgb(0, 89, 255);
+}
