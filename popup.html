@@ -18,21 +18,41 @@
     </div>
 
     <ul class="menu_wrapper">
-      <li class="active">cS -> s_C</li>
-      <li>s_C -> cS</li>
+      <li class="camel_to_snake active">cS -> s_C</li>
+      <li class="snake_to_camel">s_C -> cS</li>
     </ul>
 
     <div class="container">
-      <form>
+      <form class="camel_to_snake">
         <div class="field_wrapper">
-          <label for="camelCase">camelCase:</label>
-          <input type="text" id="camelCase" />
-          <div class="input_validations"></div>
+          <label for="camel_case">camelCase:</label>
+          <input type="text" id="camel_case" />
+          <div class="input_validations hidden">
+            Only one word is permitted!
+          </div>
         </div>
 
         <div class="field_wrapper">
           <label for="snake_case">snake_case:</label>
           <div id="snake_case" class="output"></div>
+          <div class="output_copy hidden">Copied to clipboard</div>
+        </div>
+
+        <button id="convert">Convert</button>
+      </form>
+
+      <form class="snake_to_camel hidden">
+        <div class="field_wrapper">
+          <label for="snake_case">snake_case:</label>
+          <input type="text" id="snake_case" />
+          <div class="input_validations hidden">
+            Only one word is permitted!
+          </div>
+        </div>
+
+        <div class="field_wrapper">
+          <label for="camel_case">camelCase:</label>
+          <div id="camel_case" class="output"></div>
           <div class="output_copy hidden">Copied to clipboard</div>
         </div>
 

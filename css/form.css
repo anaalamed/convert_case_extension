@@ -28,7 +28,6 @@ form {
     min-height: 30px;  
     border: 1px solid rgb(117, 161, 243);
     background-color: rgba(0, 89, 255, 0.24);
-    /* padding: 0.2rem 0.4rem; */
 }
 
 
@@ -37,12 +36,12 @@ input:focus{
     background-color: rgba(0, 89, 255, 0.24);
 }
 
-.field_wrapper div#snake_case {
+.field_wrapper div#snake_case,
+.field_wrapper div#camel_case {
     width: 100%;
     min-height: 30px;
     overflow-wrap: break-word;
-    line-height: 18px;
-    /* padding: 2px 5px; */
+    line-height: 30px;
 }
 
 .field_wrapper label {
